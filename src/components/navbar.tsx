@@ -1,6 +1,5 @@
 import { BookOpenIcon, InfoIcon, LifeBuoyIcon } from "lucide-react"
 
-import Logo from "navbar-components/logo"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -65,7 +64,7 @@ const navigationLinks = [
   },
 ]
 
-export default function Component() {
+export default function NavBar() {
   return (
     <header className="border-b px-4 md:px-6">
       <div className="flex h-16 items-center justify-between gap-4">
@@ -160,8 +159,8 @@ export default function Component() {
           </Popover>
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <a href="#" className="text-primary hover:text-primary/90">
-              <Logo />
+            <a href="/" className="text-primary hover:text-primary/90">
+                <img src="/Aitam-RISE.png" alt="Aitam Rise Logo" className="size-16" />
             </a>
             {/* Navigation menu */}
             <NavigationMenu viewport={false} className="max-md:hidden">
