@@ -16,7 +16,12 @@ import {
   Calendar,
   ArrowRight,
   Star,
-  Quote
+  Quote,
+  Building,
+  Handshake,
+  DollarSign,
+  Target,
+  Award
 } from "lucide-react";
 
 
@@ -187,12 +192,27 @@ const Homepage = () => {
     }
   ];
 
+  const partners = [
+    { name: "Microsoft", logo: "/api/placeholder/150/60" },
+    { name: "Google Cloud", logo: "/api/placeholder/150/60" },
+    { name: "AWS", logo: "/api/placeholder/150/60" },
+    { name: "Infosys", logo: "/api/placeholder/150/60" },
+    { name: "TCS", logo: "/api/placeholder/150/60" },
+    { name: "Sequoia Capital", logo: "/api/placeholder/150/60" },
+  ];
+
+  const services = [
+    { icon: Users, name: "Mentorship" },
+    { icon: DollarSign, name: "Funding" },
+    { icon: Handshake, name: "Networking" },
+    { icon: Building, name: "Infrastructure" },
+  ];
+
   return (
     <div className="overflow-hidden">
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
-        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(/hero-incubator.jpg)` }}
@@ -200,7 +220,6 @@ const Homepage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
         </div>
         
-        {/* Content */}
         <div className="relative z-10 container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white leading-tight mb-6 animate-fade-in">
@@ -230,6 +249,51 @@ const Homepage = () => {
         </div>
       </section>
 
+      {/* About & Vision Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div>
+                    <h2 className="text-3xl font-poppins font-bold mb-4">About <span className="text-accent">AITAM RISE</span></h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                        AITAM RISE is the operational heart of the Institution's Innovation Council (IIC). We are dedicated to fostering a vibrant ecosystem of innovation and entrepreneurship within Aditya Institute of Technology and Management.
+                    </p>
+                    <Link to="/about">
+                        <Button variant="outline">Learn More About Us <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                    </Link>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <div className="flex items-center mb-2">
+                            <Target className="h-6 w-6 text-accent mr-2" />
+                            <h3 className="text-xl font-poppins font-semibold">Our Vision</h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm">To be a leading hub for student-led innovation and technological breakthroughs.</p>
+                    </div>
+                    <div>
+                        <div className="flex items-center mb-2">
+                            <Award className="h-6 w-6 text-accent mr-2" />
+                            <h3 className="text-xl font-poppins font-semibold">Our Mission</h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm">To inspire and nurture young minds, transforming their ideas into scalable businesses.</p>
+                    </div>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-8 grid grid-cols-2 gap-6 text-center">
+                  {services.map((service, index) => (
+                      <div key={index} className="flex flex-col items-center">
+                        <div className="p-3 bg-white rounded-full mb-2 shadow-soft">
+                            <service.icon className="h-6 w-6 text-accent" />
+                        </div>
+                        <p className="font-semibold text-sm">{service.name}</p>
+                      </div>
+                  ))}
+              </div>
+            </div>
+        </div>
+      </section>
+
       {/* Impact Numbers Section */}
       <section className="section-padding bg-secondary/50">
         <div className="container-custom">
@@ -249,7 +313,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Program Pillars Section */}
+      {/* Program Pillars Section (Incubation Journey) */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
@@ -257,7 +321,7 @@ const Homepage = () => {
               Your Journey to <span className="gradient-text">Success</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We support entrepreneurs at every stage of their journey, from initial idea to scaling success.
+              We support entrepreneurs at every stage, from initial idea to scaling success.
             </p>
           </div>
 
@@ -285,7 +349,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Thematic Areas Section */}
+      {/* Focus Areas Section */}
       <section className="section-padding bg-secondary/50">
         <div className="container-custom">
           <div className="text-center mb-16">
@@ -313,8 +377,40 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Featured Startups Section */}
+      {/* Facilities and Partners Section */}
       <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-poppins font-bold mb-6">Facilities & Infrastructure</h2>
+              <p className="text-muted-foreground mb-6">Access state-of-the-art labs and a collaborative co-working environment to build and test your innovations.</p>
+              <Card className="card-hover">
+                  <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2">Idealab & Core Infrastructure</h3>
+                      <p className="text-sm text-muted-foreground">From 3D printers to high-performance computing, our facilities are equipped to bring your ideas to life.</p>
+                      <Link to="/facilities" className="mt-4 inline-block">
+                        <Button>Explore Facilities</Button>
+                      </Link>
+                  </CardContent>
+              </Card>
+            </div>
+            <div>
+              <h2 className="text-3xl font-poppins font-bold mb-6">Partners & Collaborators</h2>
+              <p className="text-muted-foreground mb-6">We've partnered with industry leaders to provide our startups with unparalleled resources and opportunities.</p>
+               <div className="grid grid-cols-3 gap-4">
+                {partners.map((partner, index) => (
+                  <div key={index} className="bg-secondary/50 rounded-lg flex items-center justify-center p-4 h-20">
+                    <p className="font-semibold text-muted-foreground">{partner.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Startups Section */}
+      <section className="section-padding bg-secondary/50">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
@@ -350,7 +446,7 @@ const Homepage = () => {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
@@ -380,9 +476,9 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Testimonials Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-secondary/50">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
@@ -425,15 +521,15 @@ const Homepage = () => {
             Join the next generation of innovators at AITAM RISE. Your idea could be the next big breakthrough.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact#apply">
+            <Link to="/apply">
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-medium">
                 Apply Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/programs">
+            <Link to="/contact">
               <Button variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-medium">
-                Learn More
+                Have Questions?
               </Button>
             </Link>
           </div>

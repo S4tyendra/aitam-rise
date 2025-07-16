@@ -8,6 +8,7 @@ const Footer = () => {
     { name: "Programs", href: "/programs" },
     { name: "Our Startups", href: "/startups" },
     { name: "Facilities", href: "/facilities" },
+    { name: "Downloads / Resources", href: "/resources" }, // Added
     { name: "AITAM Main Site", href: "https://www.adityatekkali.edu.in/" },
   ];
 

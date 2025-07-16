@@ -106,12 +106,11 @@ const navigationLinks = [
     type: "simple",
     icon: Handshake,
     items: [
-      { href: "/partners", label: "Partner Logos" },
+      { href: "/partners", label: "Partner" },
     ],
   },
   { href: "/news-events", label: "News & Events", icon: Calendar },
   { href: "/testimonials", label: "Testimonials", icon: Star },
-  { href: "/contact", label: "Contact", icon: MapPin },
 ]
 
 // NavLink Component
