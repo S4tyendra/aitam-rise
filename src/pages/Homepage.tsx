@@ -18,7 +18,7 @@ import {
   Star,
   Quote
 } from "lucide-react";
-import heroImage from "@/assets/hero-incubator.jpg";
+
 
 // Counter component for animated numbers
 const Counter = ({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) => {
@@ -195,7 +195,7 @@ const Homepage = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(/hero-incubator.jpg)` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
         </div>

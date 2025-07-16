@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, Linkedin, Twitter, Instagram, Youtube } from "lucide-react";
-import aitamLogo from "@/assets/aitam-rise-logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -27,7 +26,7 @@ const Footer = () => {
           {/* About AITAM RISE */}
           <div className="space-y-4">
             <img 
-              src={aitamLogo} 
+              src="/Aitam-RISE.png" 
               alt="AITAM RISE Incubator" 
               className="h-12 w-auto brightness-0 invert"
             />
