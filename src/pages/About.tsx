@@ -1,8 +1,14 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Award, Calendar } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const About = () => {
+  useSeo(
+    "About Us | AITAM RISE Incubator", 
+    "Learn about our foundation, story, and values. AITAM RISE is the operational heart of the Institution's Innovation Council (IIC) at AITAM."
+  );
+
   const timelineEvents = [
     {
       year: "2001",

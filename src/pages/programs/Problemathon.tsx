@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Zap } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Problemathon = () => {
+  useSeo(
+    "Problemathon | AITAM RISE Programs",
+    "Participate in our Problemathon, a competitive event where participants identify and define real-world problems to kickstart innovation."
+  );
+
   return (
     <Layout>
       <section className="section-padding bg-gradient-primary text-primary-foreground">

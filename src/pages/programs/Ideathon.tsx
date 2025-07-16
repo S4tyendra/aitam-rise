@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Lightbulb } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Ideathon = () => {
+  useSeo(
+    "Ideathon | AITAM RISE Programs",
+    "Join our Ideathon, a collaborative event where teams brainstorm and develop innovative solutions to specific challenges."
+  );
+
   return (
     <Layout>
       <section className="section-padding bg-gradient-primary text-primary-foreground">

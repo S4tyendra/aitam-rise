@@ -23,6 +23,7 @@ import {
   Target,
   Award
 } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 
 // Counter component for animated numbers
@@ -65,6 +66,11 @@ const Counter = ({ end, suffix = "", duration = 2000 }: { end: number; suffix?: 
 };
 
 const Homepage = () => {
+  useSeo(
+    "AITAM RISE Incubator - Innovation & Entrepreneurship at AITAM",
+    "AITAM RISE Incubator fosters innovation and entrepreneurship at Aditya Institute of Technology and Management. Transform your ideas into successful startups with our comprehensive programs, mentorship, and resources."
+  );
+
   const impactStats = [
     { number: 25, suffix: "+", label: "Startups Incubated", icon: Rocket },
     { number: 150, suffix: "+", label: "Jobs Created", icon: Users },

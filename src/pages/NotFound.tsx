@@ -3,9 +3,15 @@ import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const NotFound = () => {
   const location = useLocation();
+
+  useSeo(
+    "404: Page Not Found | AITAM RISE Incubator",
+    "The page you are looking for does not exist. Return to the AITAM RISE homepage."
+  );
 
   useEffect(() => {
     console.error(

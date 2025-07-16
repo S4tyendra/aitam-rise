@@ -10,8 +10,14 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const Services = () => {
+  useSeo(
+    "Our Services | AITAM RISE Incubator",
+    "Explore our comprehensive services for startups, including pre-incubation, incubation support, mentorship, networking, and funding assistance."
+  );
+
   const services = [
     {
       icon: Lightbulb,

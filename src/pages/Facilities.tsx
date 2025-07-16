@@ -10,8 +10,14 @@ import {
   Sparkles
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const Facilities = () => {
+  useSeo(
+    "Our Facilities | AITAM RISE Incubator",
+    "Access our state-of-the-art facilities including a collaborative co-working space, Idealab for prototyping, and specialized deep-tech labs."
+  );
+
   const facilities = [
     {
       icon: Users,

@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Award, Lightbulb, Rocket } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Mission = () => {
+  useSeo(
+    "Our Mission | AITAM RISE Incubator",
+    "Learn about our mission to foster a culture of innovation by encouraging, inspiring, and nurturing student ideas into scalable businesses."
+  );
+
   return (
     <Layout>
       <div className="overflow-hidden">

@@ -18,8 +18,14 @@ import {
   Star
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const Ecosystem = () => {
+  useSeo(
+    "Our Ecosystem: Partners & Mentors | AITAM RISE Incubator",
+    "Connect with our thriving ecosystem of expert mentors, industry leaders, and strategic partners committed to fostering entrepreneurial success."
+  );
+
   const [selectedExpertise, setSelectedExpertise] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 

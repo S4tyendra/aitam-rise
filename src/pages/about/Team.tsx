@@ -1,8 +1,14 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { User } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Team = () => {
+    useSeo(
+      "Management Team | AITAM RISE Incubator",
+      "Meet the dedicated operational team managing AITAM RISE and directly supporting our startups on their journey."
+    );
+
     const teamMembers = [
         {
           name: "Rish Kumar Devarasetti",

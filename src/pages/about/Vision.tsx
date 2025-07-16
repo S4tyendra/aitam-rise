@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Target, Users, TrendingUp } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Vision = () => {
+  useSeo(
+    "Our Vision | AITAM RISE Incubator",
+    "Discover our long-term vision to build a leading innovation ecosystem and transform AITAM into a hub for student-led entrepreneurship."
+  );
+
   return (
     <Layout>
       <div className="overflow-hidden">

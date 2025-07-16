@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Users, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const CoWorkingSpace = () => {
+  useSeo(
+    "Co-working Space | AITAM RISE Facilities",
+    "A vibrant and collaborative co-working environment at AITAM RISE, designed for productivity and community engagement for our startups."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Cpu, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Labs = () => {
+  useSeo(
+    "Specialized Labs | AITAM RISE Facilities",
+    "Explore our dedicated deep-tech labs for AI/ML, IoT, and Robotics, designed to accelerate innovation in our key focus areas."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

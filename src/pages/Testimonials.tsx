@@ -1,6 +1,12 @@
 import Layout from "@/components/Layout";
+import useSeo from "@/hooks/useSeo";
 
 const Testimonials = () => {
+  useSeo(
+    "Testimonials | AITAM RISE Incubator",
+    "Hear what successful founders, startups, and participants have to say about their experience and journey with AITAM RISE."
+  );
+
   return (
     <Layout>
       <div className="container-custom section-padding">

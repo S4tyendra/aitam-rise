@@ -19,8 +19,14 @@ import {
   FileText,
   Lightbulb
 } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Contact = () => {
+  useSeo(
+    "Contact Us | AITAM RISE Incubator",
+    "Get in touch with the AITAM RISE team. Find our address, email, and contact form for your inquiries."
+  );
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

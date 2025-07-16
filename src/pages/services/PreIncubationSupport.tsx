@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Lightbulb, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const PreIncubationSupport = () => {
+  useSeo(
+    "Pre-incubation Support | AITAM RISE Services",
+    "Our pre-incubation program helps aspiring entrepreneurs transform a nascent idea into a validated business concept."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

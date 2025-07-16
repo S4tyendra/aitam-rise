@@ -9,8 +9,14 @@ import {
   ArrowRight,
   Upload,
 } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Apply = () => {
+  useSeo(
+    "Apply Now | AITAM RISE Incubator",
+    "Ready to start your entrepreneurial journey? Apply to our pre-incubation, incubation, or accelerator programs today."
+  );
+
   const [applicationData, setApplicationData] = useState({
     founderName: "",
     email: "",

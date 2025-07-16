@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { DollarSign, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const FundingAssistance = () => {
+  useSeo(
+    "Funding Assistance | AITAM RISE Services",
+    "Learn how AITAM RISE helps startups navigate the funding landscape, from pitch deck refinement to connections with investors and VCs."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

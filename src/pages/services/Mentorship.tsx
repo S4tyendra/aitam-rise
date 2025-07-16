@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Users, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Mentorship = () => {
+  useSeo(
+    "Mentorship | AITAM RISE Services",
+    "Connect with our curated network of successful entrepreneurs, industry executives, and subject matter experts to guide your journey."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

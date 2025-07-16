@@ -17,8 +17,14 @@ import {
   GraduationCap
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const Programs = () => {
+  useSeo(
+    "Programs & Offerings | AITAM RISE Incubator",
+    "Discover our structured programs for entrepreneurs at every stage, from ideation and validation to building, launching, and scaling your startup."
+  );
+
   const programStages = [
     {
       id: "ideate",

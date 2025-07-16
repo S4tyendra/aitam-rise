@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Handshake, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Networking = () => {
+  useSeo(
+    "Networking | AITAM RISE Services",
+    "Build the connections that matter. Gain access to our vibrant ecosystem of innovators, investors, corporate partners, and alumni."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

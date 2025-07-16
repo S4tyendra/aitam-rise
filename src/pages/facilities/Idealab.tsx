@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Sparkles, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Idealab = () => {
+  useSeo(
+    "Idealab | AITAM RISE Facilities",
+    "Our central hub for creativity, rapid prototyping, and hands-on innovation, equipped with 3D printers, laser cutters, and more."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

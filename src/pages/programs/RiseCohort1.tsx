@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Rocket } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const RiseCohort1 = () => {
+  useSeo(
+    "RISE Cohort 1 | AITAM RISE Programs",
+    "Information about our inaugural incubation cohort. Stay tuned for updates on our first batch of innovators at AITAM RISE."
+  );
+
   return (
     <Layout>
       <section className="section-padding bg-gradient-primary text-primary-foreground">

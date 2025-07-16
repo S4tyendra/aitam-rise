@@ -1,8 +1,14 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const Governance = () => {
+    useSeo(
+      "Governance Council | AITAM RISE Incubator",
+      "Meet the strategic leadership of the AITAM Institution's Innovation Council (IIC) guiding our innovation ecosystem."
+    );
+
     const councilMembers = [
         {
           name: "Dr. K. Someswara Rao",

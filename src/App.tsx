@@ -1,95 +1,113 @@
+import { Suspense, lazy, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Programs from "./pages/Programs";
-import Startups from "./pages/Startups";
-import Ecosystem from "./pages/Ecosystem";
-import NewsEvents from "./pages/NewsEvents";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-import Apply from "./pages/Apply";
-import Testimonials from "./pages/Testimonials";
-import Services from "./pages/Services";
-import Facilities from "./pages/Facilities";
 
-// New Page Imports
-import Vision from "./pages/about/Vision";
-import Mission from "./pages/about/Mission";
-import Governance from "./pages/about/Governance";
-import Team from "./pages/about/Team";
-import FocusAreas from "./pages/about/FocusAreas";
+// Lazy-loaded pages
+const About = lazy(() => import("./pages/About"));
+const Programs = lazy(() => import("./pages/Programs"));
+const Startups = lazy(() => import("./pages/Startups"));
+const Ecosystem = lazy(() => import("./pages/Ecosystem"));
+const NewsEvents = lazy(() => import("./pages/NewsEvents"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Apply = lazy(() => import("./pages/Apply"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const Services = lazy(() => import("./pages/Services"));
+const Facilities = lazy(() => import("./pages/Facilities"));
 
-import PreIncubationSupport from "./pages/services/PreIncubationSupport";
-import IncubationSupport from "./pages/services/IncubationSupport";
-import Mentorship from "./pages/services/Mentorship";
-import Networking from "./pages/services/Networking";
-import FundingAssistance from "./pages/services/FundingAssistance";
+// Lazy-loaded sub-pages
+const Vision = lazy(() => import("./pages/about/Vision"));
+const Mission = lazy(() => import("./pages/about/Mission"));
+const Governance = lazy(() => import("./pages/about/Governance"));
+const Team = lazy(() => import("./pages/about/Team"));
+const FocusAreas = lazy(() => import("./pages/about/FocusAreas"));
 
-import RiseCohort1 from "./pages/programs/RiseCohort1";
-import Problemathon from "./pages/programs/Problemathon";
-import Ideathon from "./pages/programs/Ideathon";
+const PreIncubationSupport = lazy(() => import("./pages/services/PreIncubationSupport"));
+const IncubationSupport = lazy(() => import("./pages/services/IncubationSupport"));
+const Mentorship = lazy(() => import("./pages/services/Mentorship"));
+const Networking = lazy(() => import("./pages/services/Networking"));
+const FundingAssistance = lazy(() => import("./pages/services/FundingAssistance"));
 
-import Idealab from "./pages/facilities/Idealab";
-import CoWorkingSpace from "./pages/facilities/CoWorkingSpace";
-import Labs from "./pages/facilities/Labs";
+const RiseCohort1 = lazy(() => import("./pages/programs/RiseCohort1"));
+const Problemathon = lazy(() => import("./pages/programs/Problemathon"));
+const Ideathon = lazy(() => import("./pages/programs/Ideathon"));
+
+const Idealab = lazy(() => import("./pages/facilities/Idealab"));
+const CoWorkingSpace = lazy(() => import("./pages/facilities/CoWorkingSpace"));
+const Labs = lazy(() => import("./pages/facilities/Labs"));
+
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          
-          {/* About Us Routes */}
-          <Route path="/about" element={<About />} />
-          <Route path="/about/vision" element={<Vision />} />
-          <Route path="/about/mission" element={<Mission />} />
-          <Route path="/about/governance" element={<Governance />} />
-          <Route path="/about/team" element={<Team />} />
-          <Route path="/about/focus-areas" element={<FocusAreas />} />
+const App = () => {
+  useEffect(() => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      // Delay hiding to prevent flash of unstyled content
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 200);
+    }
+  }, []);
 
-          {/* Services Routes */}
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/pre-incubation" element={<PreIncubationSupport />} />
-          <Route path="/services/incubation" element={<IncubationSupport />} />
-          <Route path="/services/mentorship" element={<Mentorship />} />
-          <Route path="/services/networking" element={<Networking />} />
-          <Route path="/services/funding" element={<FundingAssistance />} />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Suspense fallback={<div className="fixed inset-0 bg-background flex justify-center items-center"><div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-primary"></div></div>}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              
+              {/* About Us Routes */}
+              <Route path="/about" element={<About />} />
+              <Route path="/about/vision" element={<Vision />} />
+              <Route path="/about/mission" element={<Mission />} />
+              <Route path="/about/governance" element={<Governance />} />
+              <Route path="/about/team" element={<Team />} />
+              <Route path="/about/focus-areas" element={<FocusAreas />} />
 
-          {/* Programs Routes */}
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/rise-cohort-1" element={<RiseCohort1 />} />
-          <Route path="/programs/problemathon" element={<Problemathon />} />
-          <Route path="/programs/ideathon" element={<Ideathon />} />
+              {/* Services Routes */}
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/pre-incubation" element={<PreIncubationSupport />} />
+              <Route path="/services/incubation" element={<IncubationSupport />} />
+              <Route path="/services/mentorship" element={<Mentorship />} />
+              <Route path="/services/networking" element={<Networking />} />
+              <Route path="/services/funding" element={<FundingAssistance />} />
 
-          {/* Facilities Routes */}
-          <Route path="/facilities" element={<Facilities />} />
-          <Route path="/facilities/idealab" element={<Idealab />} />
-          <Route path="/facilities/co-working" element={<CoWorkingSpace />} />
-          <Route path="/facilities/labs" element={<Labs />} />
+              {/* Programs Routes */}
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/programs/rise-cohort-1" element={<RiseCohort1 />} />
+              <Route path="/programs/problemathon" element={<Problemathon />} />
+              <Route path="/programs/ideathon" element={<Ideathon />} />
 
-          {/* Other Top-level Routes */}
-          <Route path="/partners" element={<Ecosystem />} />
-          <Route path="/startups" element={<Startups />} />
-          <Route path="/news-events" element={<NewsEvents />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/apply" element={<Apply />} />
-          
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+              {/* Facilities Routes */}
+              <Route path="/facilities" element={<Facilities />} />
+              <Route path="/facilities/idealab" element={<Idealab />} />
+              <Route path="/facilities/co-working" element={<CoWorkingSpace />} />
+              <Route path="/facilities/labs" element={<Labs />} />
+
+              {/* Other Top-level Routes */}
+              <Route path="/partners" element={<Ecosystem />} />
+              <Route path="/startups" element={<Startups />} />
+              <Route path="/news-events" element={<NewsEvents />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/apply" element={<Apply />} />
+              
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

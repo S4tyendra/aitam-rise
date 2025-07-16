@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Brain, Cpu, Printer, GraduationCap, CreditCard, Heart } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const FocusAreas = () => {
+    useSeo(
+      "Focus Areas | AITAM RISE Incubator",
+      "We provide specialized support for startups in high-impact technology sectors like AI/ML, IoT, EdTech, FinTech, and Social Impact."
+    );
+
     const thematicAreas = [
         {
           icon: Brain,

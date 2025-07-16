@@ -21,8 +21,14 @@ import {
   Zap
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const NewsEvents = () => {
+  useSeo(
+    "News & Events | AITAM RISE Incubator",
+    "Stay updated with the latest news, announcements, and upcoming events from the AITAM RISE community. Join our hackathons, workshops, and competitions."
+  );
+
   const [selectedEventType, setSelectedEventType] = useState("All");
   const [selectedNewsCategory, setSelectedNewsCategory] = useState("All");
 

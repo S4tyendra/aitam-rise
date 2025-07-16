@@ -1,7 +1,13 @@
 import Layout from "@/components/Layout";
 import { Rocket, CheckCircle } from "lucide-react";
+import useSeo from "@/hooks/useSeo";
 
 const IncubationSupport = () => {
+  useSeo(
+    "Incubation Support | AITAM RISE Services",
+    "Our incubation program provides comprehensive support to build and launch your startup with dedicated resources and expert guidance."
+  );
+
   return (
     <Layout>
         <section className="section-padding bg-gradient-primary text-primary-foreground">

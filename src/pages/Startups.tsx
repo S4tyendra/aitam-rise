@@ -18,8 +18,14 @@ import {
   Calendar
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const Startups = () => {
+  useSeo(
+    "Startup Portfolio | AITAM RISE Incubator",
+    "Explore the innovative startups in our portfolio. Discover the next generation of companies making an impact in EdTech, IoT, AI, and more."
+  );
+
   const [selectedIndustry, setSelectedIndustry] = useState("All");
   const [selectedStage, setSelectedStage] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
