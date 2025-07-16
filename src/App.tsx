@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Layout from "./components/Layout"; // Import the Layout component
 
 // Lazy-loaded pages
 const About = lazy(() => import("./pages/About"));
@@ -62,46 +63,49 @@ const App = () => {
         <BrowserRouter>
           <Suspense fallback={<div className="fixed inset-0 bg-background flex justify-center items-center"><div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-primary"></div></div>}>
             <Routes>
-              <Route path="/" element={<Index />} />
-              
-              {/* About Us Routes */}
-              <Route path="/about" element={<About />} />
-              <Route path="/about/vision" element={<Vision />} />
-              <Route path="/about/mission" element={<Mission />} />
-              <Route path="/about/governance" element={<Governance />} />
-              <Route path="/about/team" element={<Team />} />
-              <Route path="/about/focus-areas" element={<FocusAreas />} />
+              <Route element={<Layout />}>
+                <Route path="/" element={<Index />} />
+                
+                {/* About Us Routes */}
+                <Route path="/about" element={<About />} />
+                <Route path="/about/vision" element={<Vision />} />
+                <Route path="/about/mission" element={<Mission />} />
+                <Route path="/about/governance" element={<Governance />} />
+                <Route path="/about/team" element={<Team />} />
+                <Route path="/about/focus-areas" element={<FocusAreas />} />
 
-              {/* Services Routes */}
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/pre-incubation" element={<PreIncubationSupport />} />
-              <Route path="/services/incubation" element={<IncubationSupport />} />
-              <Route path="/services/mentorship" element={<Mentorship />} />
-              <Route path="/services/networking" element={<Networking />} />
-              <Route path="/services/funding" element={<FundingAssistance />} />
+                {/* Services Routes */}
+                <Route path="/services" element={<Services />} />
+                <Route path="/services/pre-incubation" element={<PreIncubationSupport />} />
+                <Route path="/services/incubation" element={<IncubationSupport />} />
+                <Route path="/services/mentorship" element={<Mentorship />} />
+                <Route path="/services/networking" element={<Networking />} />
+                <Route path="/services/funding" element={<FundingAssistance />} />
 
-              {/* Programs Routes */}
-              <Route path="/programs" element={<Programs />} />
-              <Route path="/programs/rise-cohort-1" element={<RiseCohort1 />} />
-              <Route path="/programs/problemathon" element={<Problemathon />} />
-              <Route path="/programs/ideathon" element={<Ideathon />} />
+                {/* Programs Routes */}
+                <Route path="/programs" element={<Programs />} />
+                <Route path="/programs/rise-cohort-1" element={<RiseCohort1 />} />
+                <Route path="/programs/problemathon" element={<Problemathon />} />
+                <Route path="/programs/ideathon" element={<Ideathon />} />
 
-              {/* Facilities Routes */}
-              <Route path="/facilities" element={<Facilities />} />
-              <Route path="/facilities/idealab" element={<Idealab />} />
-              <Route path="/facilities/co-working" element={<CoWorkingSpace />} />
-              <Route path="/facilities/labs" element={<Labs />} />
+                {/* Facilities Routes */}
+                <Route path="/facilities" element={<Facilities />} />
+                <Route path="/facilities/idealab" element={<Idealab />} />
+                <Route path="/facilities/co-working" element={<CoWorkingSpace />} />
+                <Route path="/facilities/labs" element={<Labs />} />
 
-              {/* Other Top-level Routes */}
-              <Route path="/partners" element={<Ecosystem />} />
-              <Route path="/startups" element={<Startups />} />
-              <Route path="/news-events" element={<NewsEvents />} />
-              <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/apply" element={<Apply />} />
-              <Route path="/resources" element={<Resources />} />
-              {/* 404 */}
-              <Route path="*" element={<NotFound />} />
+                {/* Other Top-level Routes */}
+                <Route path="/partners" element={<Ecosystem />} />
+                <Route path="/startups" element={<Startups />} />
+                <Route path="/news-events" element={<NewsEvents />} />
+                <Route path="/testimonials" element={<Testimonials />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/apply" element={<Apply />} />
+                <Route path="/resources" element={<Resources />} />
+                
+                {/* 404 */}
+                <Route path="*" element={<NotFound />} />
+              </Route>
             </Routes>
           </Suspense>
         </BrowserRouter>
