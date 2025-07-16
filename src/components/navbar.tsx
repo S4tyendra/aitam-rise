@@ -12,6 +12,7 @@ import {
   Handshake,
   BookOpen,
   Star,
+  FolderKanban,
   icons
 } from "lucide-react"
 import clsx from "clsx"
@@ -102,6 +103,7 @@ const navigationLinks = [
     ],
   },
   { href: "/partners", label: "Partners", icon: Handshake },
+  { href: "/resources", label: "Resources", icon: FolderKanban }, // New Link
   { href: "/news-events", label: "News & Events", icon: Calendar },
   { href: "/testimonials", label: "Testimonials", icon: Star },
 ]
