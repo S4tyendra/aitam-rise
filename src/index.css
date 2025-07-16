@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AITAM RISE Incubator Design System */
+
+@layer base {
+  :root {
+    /* AITAM RISE Brand Colors - All HSL */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Primary: Deep Navy Blue */
+    --primary: 213 67% 18%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary: Light Professional Grey */
+    --secondary: 210 17% 94%;
+    --secondary-foreground: 213 67% 18%;
+
+    /* Accent: Vibrant Innovation Orange */
+    --accent: 22 100% 52%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 210 17% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 22 100% 52%;
+
+    --radius: 0.5rem;
+
+    /* Custom Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(213 67% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(22 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(213 67% 25%) 50%, hsl(var(--accent)) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 8px 30px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 15px 40px hsl(var(--primary) / 0.2);
+    --shadow-accent: 0 10px 30px hsl(var(--accent) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 213 67% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 213 67% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 213 67% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 213 67% 18%;
+
+    --secondary: 213 30% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --accent: 22 100% 52%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 213 30% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --border: 213 30% 20%;
+    --input: 213 30% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Animated Counter */
+  .counter {
+    @apply tabular-nums font-bold text-3xl lg:text-4xl;
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-[var(--shadow-medium)] hover:-translate-y-1;
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-accent to-accent/90 text-accent-foreground px-8 py-4 rounded-full font-medium text-lg shadow-[var(--shadow-accent)] hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary-hero {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-full font-medium text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Container Max Width */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Animated Underline */
+  .nav-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Focus Area Cards */
+  .focus-card {
+    @apply relative overflow-hidden rounded-xl bg-white border border-border p-6 transition-all duration-300 hover:shadow-[var(--shadow-medium)] hover:border-accent/30;
+  }
+
+  .focus-card::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent/60 transform scale-x-0 transition-transform duration-300;
+  }
+
+  .focus-card:hover::before {
+    @apply scale-x-100;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
