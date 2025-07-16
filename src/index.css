@@ -40,7 +40,7 @@
     --input: 220 13% 91%;
     --ring: 22 100% 52%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     /* Custom Brand Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(213 67% 25%));
