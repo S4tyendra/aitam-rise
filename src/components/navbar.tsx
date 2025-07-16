@@ -11,7 +11,8 @@ import {
   MapPin,
   Handshake,
   BookOpen,
-  Star
+  Star,
+  icons
 } from "lucide-react"
 import clsx from "clsx"
 
@@ -100,15 +101,7 @@ const navigationLinks = [
       { href: "/facilities/labs", label: "Labs" },
     ],
   },
-  {
-    label: "Partners",
-    submenu: true,
-    type: "simple",
-    icon: Handshake,
-    items: [
-      { href: "/partners", label: "Partner" },
-    ],
-  },
+  { href: "/partners", label: "Partners", icon: Handshake },
   { href: "/news-events", label: "News & Events", icon: Calendar },
   { href: "/testimonials", label: "Testimonials", icon: Star },
 ]
