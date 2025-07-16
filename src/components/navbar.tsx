@@ -37,32 +37,32 @@ const navigationLinks = [
       {
         href: "/about",
         label: "About AITAM Rise",
-        description: "Learn about our mission and vision.",
+        description: "Learn about our core identity and story.",
       },
       {
         href: "/about/vision",
         label: "Vision",
-        description: "Our vision for the future of innovation.",
+        description: "Our long-term goal for the future of innovation.",
       },
       {
         href: "/about/mission",
         label: "Mission",
-        description: "Our mission to foster entrepreneurship.",
+        description: "Our purpose and what we strive to achieve.",
       },
       {
         href: "/about/governance",
         label: "Governance Council",
-        description: "Meet our leadership team.",
+        description: "Meet the strategic leadership council.",
       },
       {
         href: "/about/team",
         label: "Management Team",
-        description: "Our dedicated management team.",
+        description: "Our dedicated operational team.",
       },
       {
         href: "/about/focus-areas",
         label: "Focus Areas",
-        description: "Our key areas of expertise.",
+        description: "Key technology sectors we support.",
       },
     ],
   },

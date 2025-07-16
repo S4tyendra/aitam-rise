@@ -26,33 +26,6 @@ const About = () => {
     }
   ];
 
-  const leadership = [
-    {
-      name: "Dr. Sateesh Kumar Gudla",
-      role: "President, Institution's Innovation Council",
-      department: "IIC Leadership",
-      image: "/api/placeholder/200/250"
-    },
-    {
-      name: "Rish Kumar Devarasetti",
-      role: "Incubator Program Director",
-      department: "Program Management",
-      image: "/api/placeholder/200/250"
-    },
-    {
-      name: "Dr. [Name]",
-      role: "Chief Innovation Officer",
-      department: "Strategic Innovation",
-      image: "/api/placeholder/200/250"
-    },
-    {
-      name: "[Name]",
-      role: "Operations Head",
-      department: "Operations & Facilities",
-      image: "/api/placeholder/200/250"
-    }
-  ];
-
   return (
     <Layout>
       <div className="overflow-hidden">
@@ -67,52 +40,6 @@ const About = () => {
               Transforming innovative ideas into impactful ventures through world-class mentorship, 
               state-of-the-art facilities, and a thriving entrepreneurial ecosystem.
             </p>
-          </div>
-        </section>
-
-        {/* Mission & Vision Section */}
-        <section className="section-padding">
-          <div className="container-custom">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div>
-                  <div className="flex items-center mb-4">
-                    <Target className="h-8 w-8 text-accent mr-3" />
-                    <h2 className="text-3xl font-poppins font-bold">Our Vision</h2>
-                  </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    To build a leading innovation ecosystem that transforms AITAM into a hub for 
-                    student-led entrepreneurship and technological breakthroughs that impact society.
-                  </p>
-                </div>
-                
-                <div>
-                  <div className="flex items-center mb-4">
-                    <Award className="h-8 w-8 text-accent mr-3" />
-                    <h2 className="text-3xl font-poppins font-bold">Our Mission</h2>
-                  </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    To systematically foster a culture of innovation by encouraging, inspiring, 
-                    and nurturing young students; supporting them to work with new ideas and 
-                    transform them into market-ready prototypes and scalable businesses.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-8">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="h-10 w-10 text-accent" />
-                    </div>
-                    <h3 className="text-xl font-poppins font-semibold mb-2">Community-Driven Innovation</h3>
-                    <p className="text-muted-foreground">
-                      We believe in the power of collaborative innovation and peer learning.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -140,35 +67,8 @@ const About = () => {
           </div>
         </section>
 
-        {/* Leadership Team Section */}
-        <section className="section-padding">
-          <div className="container-custom">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
-                Our <span className="gradient-text">Leadership Team</span>
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Experienced leaders and innovators guiding the next generation of entrepreneurs.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {leadership.map((leader, index) => (
-                <Card key={index} className="card-hover text-center">
-                  <CardContent className="p-6">
-                    <div className="w-32 h-40 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mx-auto mb-4"></div>
-                    <h3 className="font-poppins font-semibold text-lg mb-2">{leader.name}</h3>
-                    <p className="text-accent font-medium mb-1">{leader.role}</p>
-                    <p className="text-sm text-muted-foreground">{leader.department}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Our Story Timeline */}
-        <section className="section-padding bg-secondary/50">
+        <section className="section-padding">
           <div className="container-custom">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
@@ -208,7 +108,7 @@ const About = () => {
         </section>
 
         {/* Values Section */}
-        <section className="section-padding">
+        <section className="section-padding bg-secondary/50">
           <div className="container-custom">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">

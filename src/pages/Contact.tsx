@@ -74,7 +74,7 @@ const Contact = () => {
         <section className="section-padding bg-gradient-primary text-primary-foreground">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 animate-fade-in">
-              Contact & <span className="text-accent">Apply</span>
+              Contact
             </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto text-primary-foreground/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Ready to start your entrepreneurial journey? Get in touch with us or apply to our programs.

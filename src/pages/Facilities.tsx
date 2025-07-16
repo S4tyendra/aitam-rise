@@ -14,25 +14,22 @@ import { Link } from "react-router-dom";
 const Facilities = () => {
   const facilities = [
     {
-      icon: Building,
+      icon: Users,
       title: "Co-working Space",
-      description: "A vibrant, open-plan workspace designed for collaboration and innovation. Features high-speed internet, meeting rooms, and all the amenities you need to be productive.",
-      image: "/api/placeholder/400/250",
-      details: ["24/7 Access", "Flexible Seating", "Private Meeting Booths", "Event Space"]
+      description: "A vibrant, open-plan workspace designed for collaboration and innovation, with all the amenities you need to be productive.",
+      link: "/facilities/co-working"
     },
     {
       icon: Sparkles,
       title: "Idealab",
-      description: "Our central hub for creativity and rapid prototyping. Bring your ideas to life with access to cutting-edge tools and equipment for design and fabrication.",
-      image: "/api/placeholder/400/250",
-      details: ["3D Printers & Scanners", "Laser Cutters", "Electronics Workbenches", "Design Software Suite"]
+      description: "Our central hub for creativity and rapid prototyping. Bring your ideas to life with access to cutting-edge tools and equipment.",
+      link: "/facilities/idealab"
     },
     {
       icon: Cpu,
       title: "Specialized Labs",
-      description: "Dedicated labs for deep-tech development in our key focus areas, equipped with high-performance computing and specialized hardware.",
-      image: "/api/placeholder/400/250",
-      details: ["AI/ML Lab with GPUs", "IoT Lab with Sensor Kits", "Robotics & Automation Lab", "Secure Data Center"]
+      description: "Dedicated labs for deep-tech development in our key focus areas, equipped with high-performance computing and hardware.",
+      link: "/facilities/labs"
     }
   ];
 
@@ -55,40 +52,27 @@ const Facilities = () => {
         {/* Facilities Details */}
         <section className="section-padding">
           <div className="container-custom">
-            <div className="space-y-16">
+            <div className="grid md:grid-cols-3 gap-8">
               {facilities.map((facility, index) => (
-                <Card key={index} className="overflow-hidden card-hover">
-                  <div className="grid md:grid-cols-2 items-center">
-                    <div className="p-8 md:p-12">
-                      <div className="flex items-center mb-4">
-                        <div className="p-3 bg-accent/20 rounded-full mr-4">
-                          <facility.icon className="h-8 w-8 text-accent" />
-                        </div>
-                        <h2 className="text-3xl font-poppins font-bold">{facility.title}</h2>
-                      </div>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">{facility.description}</p>
-                      <ul className="grid grid-cols-2 gap-x-4 gap-y-2 mb-8">
-                        {facility.details.map((detail, i) => (
-                           <li key={i} className="flex items-center text-sm">
-                           <ArrowRight className="h-4 w-4 mr-2 text-accent" />
-                           {detail}
-                         </li>
-                        ))}
-                      </ul>
-                      <Link to="/programs">
-                        <Button variant="outline">
-                            Explore Related Programs
-                        </Button>
-                      </Link>
-                    </div>
-                    <div className="bg-secondary h-64 md:h-full">
-                      {/* Placeholder for an image */}
-                      <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                          <facility.icon className="h-24 w-24 text-primary/20"/>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
+                 <Card key={index} className="card-hover h-full flex flex-col">
+                 <CardContent className="p-8 flex-1 flex flex-col">
+                   <div className="mb-6 flex justify-center">
+                     <div className="p-4 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full">
+                       <facility.icon className="h-10 w-10 text-accent" />
+                     </div>
+                   </div>
+                   <h3 className="text-xl font-poppins font-semibold mb-4 text-center">{facility.title}</h3>
+                   <p className="text-muted-foreground mb-6 leading-relaxed text-center flex-grow">{facility.description}</p>
+                   <div className="mt-auto">
+                     <Link to={facility.link}>
+                       <Button variant="outline" className="w-full">
+                         Learn More
+                         <ArrowRight className="ml-2 h-4 w-4" />
+                       </Button>
+                     </Link>
+                   </div>
+                 </CardContent>
+               </Card>
               ))}
             </div>
           </div>

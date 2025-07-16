@@ -16,32 +16,32 @@ const Services = () => {
     {
       icon: Lightbulb,
       title: "Pre-incubation Support",
-      description: "For aspiring entrepreneurs with early-stage ideas. We help you validate your concept, conduct market research, and build a foundational business plan.",
-      features: ["Ideation Workshops", "Market Validation", "Business Model Canvas", "Pitch Practice"]
+      description: "For aspiring entrepreneurs with early-stage ideas. We help you validate your concept and build a foundational business plan.",
+      link: "/services/pre-incubation"
     },
     {
       icon: Rocket,
       title: "Incubation Support",
       description: "For startups with a validated idea or MVP. We provide the resources to build, launch, and grow your product in the market.",
-      features: ["Co-working Space", "Seed Funding Access", "Legal & IP Support", "Product Development"]
+      link: "/services/incubation"
     },
     {
       icon: Users,
       title: "Mentorship",
-      description: "Connect with our network of experienced industry veterans, successful entrepreneurs, and subject matter experts for personalized guidance.",
-      features: ["1-on-1 Mentoring", "Expert-in-Residence", "Founder Circles", "Technical Guidance"]
+      description: "Connect with our network of experienced industry veterans for personalized guidance.",
+      link: "/services/mentorship"
     },
     {
       icon: Handshake,
       title: "Networking",
-      description: "Gain access to a vibrant ecosystem of innovators, investors, and industry partners to build valuable connections for your startup.",
-      features: ["Investor Demo Days", "Industry Mixers", "Community Events", "Partner Introductions"]
+      description: "Gain access to a vibrant ecosystem of innovators, investors, and industry partners.",
+      link: "/services/networking"
     },
     {
       icon: DollarSign,
       title: "Funding Assistance",
-      description: "We help you navigate the complex funding landscape, from preparing your pitch to connecting with the right investors.",
-      features: ["Pitch Deck Refinement", "Investor Readiness", "Access to Angel & VC Networks", "Grant Application Support"]
+      description: "We help you navigate the complex funding landscape, from preparing your pitch to connecting with investors.",
+      link: "/services/funding"
     }
   ];
 
@@ -76,17 +76,10 @@ const Services = () => {
                     <h3 className="text-xl font-poppins font-semibold mb-4 text-center">{service.title}</h3>
                     <p className="text-muted-foreground mb-6 leading-relaxed text-center flex-grow">{service.description}</p>
                     <div className="mt-auto">
-                      <ul className="space-y-2 text-sm text-muted-foreground mb-6">
-                        {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-center">
-                            <ArrowRight className="h-4 w-4 mr-2 text-accent" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                      <Link to="/contact">
+                      <Link to={service.link}>
                         <Button variant="outline" className="w-full">
-                          Inquire Now
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                     </div>
