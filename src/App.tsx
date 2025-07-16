@@ -11,6 +11,7 @@ import Ecosystem from "./pages/Ecosystem";
 import NewsEvents from "./pages/NewsEvents";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Apply from "./pages/Apply";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/ecosystem" element={<Ecosystem />} />
           <Route path="/news-events" element={<NewsEvents />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/apply" element={<Apply />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

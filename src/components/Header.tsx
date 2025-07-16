@@ -52,7 +52,7 @@ const Header = () => {
 
           {/* Apply Now Button */}
           <div className="hidden lg:flex items-center">
-            <Link to="/contact#apply">
+            <Link to="/apply">
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105">
                 Apply Now
               </Button>
