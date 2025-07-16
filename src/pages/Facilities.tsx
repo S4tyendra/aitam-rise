@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -40,7 +40,7 @@ const Facilities = () => {
   ];
 
   return (
-    <Layout>
+    
       <div className="overflow-hidden">
         
         {/* Hero Section */}
@@ -85,7 +85,7 @@ const Facilities = () => {
         </section>
 
       </div>
-    </Layout>
+    
   );
 };
 

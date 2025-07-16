@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import Layout from "@/components/Layout";
+
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
@@ -21,7 +21,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <Layout>
+    
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center max-w-md mx-auto px-4">
           <div className="mb-8">
@@ -46,7 +46,7 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    
   );
 };
 

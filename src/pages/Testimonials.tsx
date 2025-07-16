@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import useSeo from "@/hooks/useSeo";
 
 const Testimonials = () => {
@@ -8,7 +8,7 @@ const Testimonials = () => {
   );
 
   return (
-    <Layout>
+    
       <div className="container-custom section-padding">
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
@@ -66,7 +66,7 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    
   );
 };
 

@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { User } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
@@ -33,7 +33,7 @@ const Team = () => {
       ];
 
   return (
-    <Layout>
+    <>
         <section className="section-padding bg-gradient-primary text-primary-foreground">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 animate-fade-in">
@@ -61,7 +61,7 @@ const Team = () => {
             </div>
           </div>
         </section>
-    </Layout>
+    </>
   );
 };
 

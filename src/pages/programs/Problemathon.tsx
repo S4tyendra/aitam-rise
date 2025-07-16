@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Zap } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
 
@@ -9,7 +9,7 @@ const Problemathon = () => {
   );
 
   return (
-    <Layout>
+    <>
       <section className="section-padding bg-gradient-primary text-primary-foreground">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 animate-fade-in">
@@ -24,7 +24,7 @@ const Problemathon = () => {
                 <p className="mt-4 text-muted-foreground">Details about our next Problemathon will be announced soon. Check our News & Events page for updates.</p>
             </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

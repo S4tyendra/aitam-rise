@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Target, Users, TrendingUp } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
 
@@ -9,7 +9,7 @@ const Vision = () => {
   );
 
   return (
-    <Layout>
+    
       <div className="overflow-hidden">
         <section className="section-padding bg-gradient-primary text-primary-foreground">
           <div className="container-custom text-center">
@@ -42,7 +42,7 @@ const Vision = () => {
           </div>
         </section>
       </div>
-    </Layout>
+    
   );
 };
 

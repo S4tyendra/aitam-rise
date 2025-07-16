@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Award, Lightbulb, Rocket } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
 
@@ -9,7 +9,7 @@ const Mission = () => {
   );
 
   return (
-    <Layout>
+    
       <div className="overflow-hidden">
         <section className="section-padding bg-gradient-primary text-primary-foreground">
           <div className="container-custom text-center">
@@ -41,7 +41,7 @@ const Mission = () => {
           </div>
         </section>
       </div>
-    </Layout>
+    
   );
 };
 

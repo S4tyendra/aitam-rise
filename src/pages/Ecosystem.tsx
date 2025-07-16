@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -186,7 +186,7 @@ const Ecosystem = () => {
   };
 
   return (
-    <Layout>
+    
       <div className="overflow-hidden">
         
         {/* Hero Section */}
@@ -489,7 +489,7 @@ const Ecosystem = () => {
           </div>
         </section>
       </div>
-    </Layout>
+    
   );
 };
 

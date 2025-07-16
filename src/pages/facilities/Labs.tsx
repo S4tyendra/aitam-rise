@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Cpu, CheckCircle } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
 
@@ -9,7 +9,7 @@ const Labs = () => {
   );
 
   return (
-    <Layout>
+    <>
         <section className="section-padding bg-gradient-primary text-primary-foreground">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 animate-fade-in">
@@ -33,7 +33,7 @@ const Labs = () => {
                 </ul>
             </div>
         </section>
-    </Layout>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -56,7 +56,7 @@ const Apply = () => {
   ];
 
   return (
-    <Layout>
+    
       <div className="overflow-hidden">
         
         {/* Hero Section */}
@@ -164,7 +164,7 @@ const Apply = () => {
           </div>
         </section>
       </div>
-    </Layout>
+    
   );
 };
 

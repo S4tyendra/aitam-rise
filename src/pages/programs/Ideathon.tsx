@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+
 import { Lightbulb } from "lucide-react";
 import useSeo from "@/hooks/useSeo";
 
@@ -9,7 +9,7 @@ const Ideathon = () => {
   );
 
   return (
-    <Layout>
+    <>
       <section className="section-padding bg-gradient-primary text-primary-foreground">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 animate-fade-in">
@@ -24,7 +24,8 @@ const Ideathon = () => {
                 <p className="mt-4 text-muted-foreground">Details about our next Ideathon will be announced soon. Check our News & Events page for updates.</p>
             </div>
       </section>
-    </Layout>
+      </>
+    
   );
 };
 
