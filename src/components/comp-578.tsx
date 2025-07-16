@@ -17,7 +17,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-// Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
   { href: "#", label: "Home" },
   {
@@ -134,7 +133,6 @@ export default function Component() {
                           {link.label}
                         </NavigationMenuLink>
                       )}
-                      {/* Add separator between different types of items */}
                       {index < navigationLinks.length - 1 &&
                         // Show separator if:
                         // 1. One is submenu and one is simple link OR

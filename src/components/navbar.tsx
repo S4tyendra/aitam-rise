@@ -103,12 +103,12 @@ const navigationLinks = [
     ],
   },
   { href: "/partners", label: "Partners", icon: Handshake },
-  { href: "/resources", label: "Resources", icon: FolderKanban }, // New Link
+  { href: "/resources", label: "Resources", icon: FolderKanban },
   { href: "/news-events", label: "News & Events", icon: Calendar },
   { href: "/testimonials", label: "Testimonials", icon: Star },
 ]
 
-// NavLink Component
+
 const NavLink = ({ href, external, children, onClick, isFirst, isLast, className, isLoading }) => {
   const baseClasses = "block px-5 py-2.5 text-sm font-medium transition-colors duration-200";
   const radiusClasses = clsx({ 'rounded-t-2xl': isFirst, 'rounded-b-2xl': isLast });

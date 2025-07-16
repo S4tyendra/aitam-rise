@@ -18,7 +18,7 @@ const Apply = lazy(() => import("./pages/Apply"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
 const Services = lazy(() => import("./pages/Services"));
 const Facilities = lazy(() => import("./pages/Facilities"));
-const Resources = lazy(() => import("./pages/Resources")); // New import
+const Resources = lazy(() => import("./pages/Resources"));
 
 // Lazy-loaded sub-pages
 const Vision = lazy(() => import("./pages/about/Vision"));
@@ -48,7 +48,6 @@ const App = () => {
   useEffect(() => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-      // Delay hiding to prevent flash of unstyled content
       setTimeout(() => {
         preloader.classList.add('hidden');
       }, 200);
@@ -100,9 +99,8 @@ const App = () => {
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/apply" element={<Apply />} />
-              <Route path="/resources" element={<Resources />} /> {/* New Route */}
-              
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="/resources" element={<Resources />} />
+              {/* 404 */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
